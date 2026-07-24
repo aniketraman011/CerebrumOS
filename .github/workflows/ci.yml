@@ -1,0 +1,42 @@
+name: CerebrumOS Chaos & CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Hardware Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++ libpthread-stubs0-dev python3-dev pybind11-dev
+
+    - name: Configure CMake (Chaos Sanitizers Enabled)
+      run: |
+        mkdir build && cd build
+        # We enforce TSan and ASan on every build to guarantee our lock-free 
+        # C++ structures have absolutely zero data races.
+        cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="-fsanitize=thread,address -fPIE -pie"
+
+    - name: Compile CerebrumOS C++ Core
+      run: cmake --build build --parallel 4
+
+    - name: Execute Lock-Free Unit Tests
+      run: |
+        cd build
+        ctest --output-on-failure
+      env:
+        TSAN_OPTIONS: "halt_on_error=1:history_size=7"
+        ASAN_OPTIONS: "detect_leaks=1"
+
+    - name: Python API Integration Verification
+      run: |
+        python3 -m pip install -r backend/requirements.txt
+        python3 -m pytest backend/tests/

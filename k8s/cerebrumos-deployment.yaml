@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cerebrumos-inference-node
+  labels:
+    app: cerebrumos
+    tier: inference
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cerebrumos
+  template:
+    metadata:
+      labels:
+        app: cerebrumos
+      annotations:
+        # Automated MLOps scraping setup
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9090"
+        prometheus.io/path: "/metrics"
+    spec:
+      # Topology-aware scheduling: Strict affinity to high-tier accelerators
+      nodeSelector:
+        accelerator: nvidia-a100
+      containers:
+      - name: cerebrumos-engine
+        image: cerebrumos/engine:latest
+        ports:
+        - containerPort: 8000
+          name: fastapi
+        - containerPort: 9090
+          name: prometheus
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+            memory: "64Gi"
+          requests:
+            cpu: "8"
+            memory: "32Gi"
+        securityContext:
+          # Required for running `perf` hardware counters in production profiling.
+          # WARNING: Review security posture before enabling in multi-tenant clusters.
+          capabilities:
+            add: ["SYS_ADMIN"]
+        volumeMounts:
+        - name: dshm
+          mountPath: /dev/shm
+      volumes:
+      - name: dshm
+        emptyDir:
+          medium: Memory
+          sizeLimit: 16Gi

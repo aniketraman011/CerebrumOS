@@ -1,0 +1,26 @@
+# CerebrumOS
+node_modules/
+**/node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.DS_Store
+*.db
+!backend/cerebrum.db
+frontend/.next/
+frontend/out/
+dist/
+build/
+*.so
+*.pyd
+*.dll
+.cmake/
+CMakeFiles/
+cmake-build-*/
+.idea/
+.vscode/
+*.log

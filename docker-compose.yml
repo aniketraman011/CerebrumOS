@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  cerebrumos-backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile.backend
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu, compute, utility]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    ports:
+      - "8000:8000" # FastAPI Client Ingress
+      - "9090:9090" # Prometheus Metrics Scraping
+    # CRITICAL: Extending /dev/shm is strictly required for zero-copy IPC
+    # (Unix Domain Sockets) and cudaHostAlloc pinned memory bridging.
+    shm_size: '16gb' 
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+
+  cerebrumos-frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000" # Next.js 15 Dashboard
+    depends_on:
+      - cerebrumos-backend
