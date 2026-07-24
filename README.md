@@ -477,7 +477,7 @@ Watch the live dashboard update with:
 *Live system telemetry: CPU usage (47.8%), GPU VRAM (79.7%), MLFQ scheduler status (10 active jobs), cache hit rate (88.3%)*
 
 ### Benchmark Comparison
-![Benchmarks](docs/images/benchmarks.png)
+![Benchmarks](docs/images/benchmarks.jpeg)
 *Side-by-side scheduler comparison: P99 latency, throughput charts, and detailed metrics table (AVG/P50/P95/P99/CPU%/MEM%)*
 
 ### System Architecture
