@@ -1280,7 +1280,7 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 1. **Fork the repository** on GitHub
 2. **Clone your fork**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/CerebrumOS.git
+   git clone https://github.com/aniketraman011/CerebrumOS.git
    cd CerebrumOS-main
    ```
 3. **Create a feature branch**:
@@ -1354,13 +1354,13 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 
 #### 🐛 Bug Fixes
 
-- Check [Issues](https://github.com/yourusername/CerebrumOS/issues) tagged `bug`
+- Check [Issues](https://github.com/aniketraman011/CerebrumOS/issues) tagged `bug`
 - Reproduce bug locally and add test case demonstrating failure
 - Fix and verify test passes
 
 #### ✨ Feature Requests
 
-- Check [Issues](https://github.com/yourusername/CerebrumOS/issues) tagged `enhancement`
+- Check [Issues](https://github.com/aniketraman011/CerebrumOS/issues) tagged `enhancement`
 - Discuss design in issue comments before implementing
 - Break large features into smaller PRs
 
@@ -1395,9 +1395,9 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 
 ### Community
 
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/CerebrumOS/discussions)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/CerebrumOS/issues)
-- **Email**: cerebrumos@example.com
+- **Discussions**: [GitHub Discussions](https://github.com/aniketraman011/CerebrumOS/discussions)
+- **Issues**: [GitHub Issues](https://github.com/aniketraman011/CerebrumOS/issues)
+- **Email**: aniketraman74@gmail.com
 
 ---
 
@@ -1405,7 +1405,7 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 
 MIT License
 
-Copyright (c) 2024 CerebrumOS Contributors
+Copyright (c) 2026 Aniket Raman
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1431,10 +1431,10 @@ SOFTWARE.
 
 ### Aniket Raman
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB_USERNAME)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://your-portfolio.com)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aniketraman011)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aniket-raman-18663928a/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://aniket-raman-portfolio.vercel.app/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aniketraman74@gmail.com)
 
 **Systems Engineer | AI Infrastructure Specialist | Open Source Contributor**
 
@@ -1573,16 +1573,22 @@ Based on the current architecture, here are realistic enhancements planned for f
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/CerebrumOS&type=Date)](https://star-history.com/#yourusername/CerebrumOS&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=aniketraman011/CerebrumOS&type=Date)](https://star-history.com/#aniketraman011/CerebrumOS&Date)
 
 ---
 
 <div align="center">
 
-### ⭐ If you find CerebrumOS useful, please star the repository!
+### ⭐ If you find CerebrumOS useful, please consider giving it a star!
 
-**Made with ❤️ by the CerebrumOS community**
+**Made with ❤️ by Aniket Raman**
 
-[Report Bug](https://github.com/yourusername/CerebrumOS/issues) · [Request Feature](https://github.com/yourusername/CerebrumOS/issues) · [Documentation](https://github.com/yourusername/CerebrumOS/tree/main/docs)
+<a href="https://github.com/aniketraman011/CerebrumOS/issues">🐞 Report Bug</a>
+&nbsp;•&nbsp;
+<a href="https://github.com/aniketraman011/CerebrumOS/issues">💡 Request Feature</a>
+&nbsp;•&nbsp;
+<a href="https://github.com/aniketraman011/CerebrumOS/tree/main/docs">📖 Documentation</a>
+
+</div>
 
 </div>
